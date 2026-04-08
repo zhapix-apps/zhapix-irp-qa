@@ -1,13 +1,13 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-const BASE_URL = 'https://zhapix.github.io/zhapix-irp/';
+//const BASE_URL = 'https://zhapix.github.io/zhapix-irp/';
 
 test.describe('IRP Platform - Desktop Tests', () => {
     test.use({ viewport: { width: 1280, height: 800 } });
 
     test.beforeEach(async ({ page }) => {
-        await page.goto(BASE_URL);
+        await page.goto('');
     });
 
     // IRP_DT_TC_001 - Page title and URL
@@ -16,16 +16,25 @@ test.describe('IRP Platform - Desktop Tests', () => {
         await expect(page).toHaveTitle('Industry Readiness Program – Zhapix');
     });
 
-    // IRP_DT_TC_002 - Zhapix logo visible
-    test('IRP_DT_TC_002 - Verify Zhapix logo is visible in header', async ({ page }) => {
+    // IRP_DT_TC_002 - Zhapix logo visible on left side of header
+    test('IRP_DT_TC_002 - Verify Zhapix logo is visible on left side of header', async ({ page }) => {
         const logo = page.locator('img[alt="Zhapix"]')
         await expect(logo).toBeVisible();
+        
+        const logoBox = await logo.boundingBox(); //gives position + size of the element on the screen.
+        const pageWidth = page.viewportSize().width;
+        expect(logoBox.x).toBeLessThan(pageWidth / 3); // Logo should be in left third of page
     });
 
-    // IRP_DT_TC_003 - Login button visible
-    test('IRP_DT_TC_003 - Verify Login button is visible in header', async ({ page }) => {
-        const loginButton = page.getByText(/login/i);
+    // IRP_DT_TC_003 - Login button visible on right side of header
+    test('IRP_DT_TC_003 - Verify Login button is visible on right side of header', async ({ page }) => {
+        const loginButton = page.locator('.btn-login').getByText(/login/i);
+        //const loginButton = page.getByText(/login/i);
         await expect(loginButton).toBeVisible();
+        
+        const buttonBox = await loginButton.boundingBox();
+        const pageWidth = page.viewportSize().width;
+        expect(buttonBox.x).toBeGreaterThan((pageWidth * 2) / 3); // Login button should be in right third of page
     });
 
     // IRP_DT_TC_004 - Hero section headline and tagline
@@ -42,23 +51,24 @@ test.describe('IRP Platform - Desktop Tests', () => {
 
     // IRP_DT_TC_006 - Mentor profile details
     test('IRP_DT_TC_006 - Verify Mentor profile details are complete and accurate', async ({ page }) => {
-        await expect(page.getByText(/Vijayan Thanigaivelu/i)).toBeVisible();
-        await expect(page.getByText(/founder/i)).toBeVisible();
-        await expect(page.getByText(/20\s*years/i)).toBeVisible();
-        await expect(page.getByText(/wipro/i)).toBeVisible();
-        await expect(page.getByText(/apple/i)).toBeVisible();
-        await expect(page.getByText(/mastercard/i)).toBeVisible();
+        const mentorSection = page.locator('.mentor__content');
+        await expect(mentorSection.getByText(/Vijayan Thanigaivelu/i)).toBeVisible();
+        await expect(mentorSection.getByText(/founder/i)).toBeVisible();
+        await expect(mentorSection.getByText(/20\s*years/i)).toBeVisible();
+        await expect(mentorSection.getByText(/wipro/i)).toBeVisible();
+        await expect(mentorSection.getByText(/apple/i)).toBeVisible();
+        await expect(mentorSection.getByText(/mastercard/i)).toBeVisible();
         const mentorPhoto = page.getByRole('img', { name: /mentor|vijayan/i });
         await expect(mentorPhoto).toBeVisible();
     });
 
     // IRP_DT_TC_007 - 5 benefit cards in Why Choose section
     test('IRP_DT_TC_007 - Verify all 5 benefit cards are present in Why Choose Zhapix IRP', async ({ page }) => {
-        await expect(page.getByRole('heading', { name: /office environment/i })).toBeVisible();
-        await expect(page.getByRole('heading', { name: /dual certification/i })).toBeVisible();
-        await expect(page.getByRole('heading', { name: /kpi-based recognition/i })).toBeVisible();
-        await expect(page.getByRole('heading', { name: /flexible & inclusive/i })).toBeVisible();
-        await expect(page.getByRole('heading', { name: /professional tools/i })).toBeVisible();
+    const container = page.locator('section.why').locator('.why__container');        await expect(page.getByRole('heading', { name: /office environment/i })).toBeVisible();
+        await expect(container.getByRole('heading', { name: /dual certification/i })).toBeVisible();
+        await expect(container.getByRole('heading', { name: /kpi-based recognition/i })).toBeVisible();
+        await expect(container.getByRole('heading', { name: /flexible & inclusive/i })).toBeVisible();
+        await expect(container.getByRole('heading', { name: /professional tools/i })).toBeVisible();
     });
 
     // IRP_DT_TC_008 - Fullstack 12 technologies
@@ -181,7 +191,7 @@ test.describe('IRP Platform - Desktop Tests', () => {
             await expect(img).toBeVisible();
 
             // Check not broken
-            const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+            const naturalWidth = await img.evaluate(el => el.naturalWidth);
             expect(naturalWidth).toBeGreaterThan(0);
 
             // Check correct image loaded
