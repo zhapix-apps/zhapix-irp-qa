@@ -20,7 +20,7 @@ test.describe('IRP Platform - Desktop Tests', () => {
     test('IRP_DT_TC_002 - Verify Zhapix logo is visible on left side of header', async ({ page }) => {
         const logo = page.locator('img[alt="Zhapix"]')
         await expect(logo).toBeVisible();
-        
+
         const logoBox = await logo.boundingBox(); //gives position + size of the element on the screen.
         const pageWidth = page.viewportSize().width;
         expect(logoBox.x).toBeLessThan(pageWidth / 3); // Logo should be in left third of page
@@ -31,7 +31,7 @@ test.describe('IRP Platform - Desktop Tests', () => {
         const loginButton = page.locator('.btn-login').getByText(/login/i);
         //const loginButton = page.getByText(/login/i);
         await expect(loginButton).toBeVisible();
-        
+
         const buttonBox = await loginButton.boundingBox();
         const pageWidth = page.viewportSize().width;
         expect(buttonBox.x).toBeGreaterThan((pageWidth * 2) / 3); // Login button should be in right third of page
@@ -63,8 +63,9 @@ test.describe('IRP Platform - Desktop Tests', () => {
     });
 
     // IRP_DT_TC_007 - 5 benefit cards in Why Choose section
-    test('IRP_DT_TC_007 - Verify all 5 benefit cards are present in Why Choose Zhapix IRP', async ({ page }) => {
-    const container = page.locator('section.why').locator('.why__container');        await expect(page.getByRole('heading', { name: /office environment/i })).toBeVisible();
+    test.only('IRP_DT_TC_007 - Verify all 5 benefit cards are present in Why Choose Zhapix IRP', async ({ page }) => {
+        const container = page.locator('section.why').locator('.why__container');
+        await expect(container.getByRole('heading', { name: /office environment/i })).toBeVisible();
         await expect(container.getByRole('heading', { name: /dual certification/i })).toBeVisible();
         await expect(container.getByRole('heading', { name: /kpi-based recognition/i })).toBeVisible();
         await expect(container.getByRole('heading', { name: /flexible & inclusive/i })).toBeVisible();
@@ -206,40 +207,40 @@ test.describe('IRP Platform - Desktop Tests', () => {
     });
 
     // IRP_DT_TC_018 - Fullstack and Automation cards side-by-side on desktop
-      test('IRP_DT_TC_018 - Verify Fullstack and Automation Testing cards display side-by-side on desktop', async ({ page }) => {
+    test('IRP_DT_TC_018 - Verify Fullstack and Automation Testing cards display side-by-side on desktop', async ({ page }) => {
         const fullstackCard = page.getByRole('heading', { name: /fullstack/i });
         const automationCard = page.getByRole('heading', { name: /automation testing/i });
         await expect(fullstackCard).toBeVisible();
         await expect(automationCard).toBeVisible();
-    
+
         const fsBox = await fullstackCard.boundingBox();
         const atBox = await automationCard.boundingBox();
         expect(Math.abs(fsBox.y - atBox.y)).toBeLessThan(50); // same row
-      });
-    
-      // IRP_DT_TC_019 - Transformation journey horizontal timeline on desktop
-      test('IRP_DT_TC_019 - Verify 4-phase transformation journey renders as horizontal timeline', async ({ page }) => {
+    });
+
+    // IRP_DT_TC_019 - Transformation journey horizontal timeline on desktop
+    test('IRP_DT_TC_019 - Verify 4-phase transformation journey renders as horizontal timeline', async ({ page }) => {
         const phase1 = page.getByText(/phase\s*1/i);
         const phase4 = page.getByText(/phase\s*4/i);
         await expect(phase1).toBeVisible();
         await expect(phase4).toBeVisible();
-    
+
         const p1Box = await phase1.boundingBox();
         const p4Box = await phase4.boundingBox();
         expect(Math.abs(p1Box.y - p4Box.y)).toBeLessThan(80); // same horizontal row
-      });
-      
-/*
-    // IRP_DT_TC_020 - Login button navigates to login page
-    
-    test.only('IRP_DT_TC_020 - Verify Login button navigates to login page', async ({ page }) => {
-        const loginButton = page.getByRole('link', { name: /login/i });
-        await expect(loginButton).toBeVisible();
-        await loginButton.click();
-        await expect(page.getByRole('textbox', { name: /username|email/i })
-            .or(page.getByRole('textbox', { name: /password/i }))).toBeVisible();
     });
-    */
+
+    /*
+        // IRP_DT_TC_020 - Login button navigates to login page
+        
+        test.only('IRP_DT_TC_020 - Verify Login button navigates to login page', async ({ page }) => {
+            const loginButton = page.getByRole('link', { name: /login/i });
+            await expect(loginButton).toBeVisible();
+            await loginButton.click();
+            await expect(page.getByRole('textbox', { name: /username|email/i })
+                .or(page.getByRole('textbox', { name: /password/i }))).toBeVisible();
+        });
+        */
 
     // IRP_DT_TC_021 - Apply Now navigates to Zoho form
     test('IRP_DT_TC_021 - Verify Apply Now button navigates to Zoho application form', async ({ page, context }) => {
