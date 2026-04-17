@@ -63,7 +63,7 @@ test.describe('IRP Platform - Desktop Tests', () => {
     });
 
     // IRP_DT_TC_007 - 5 benefit cards in Why Choose section
-    test.only('IRP_DT_TC_007 - Verify all 5 benefit cards are present in Why Choose Zhapix IRP', async ({ page }) => {
+    test('IRP_DT_TC_007 - Verify all 5 benefit cards are present in Why Choose Zhapix IRP', async ({ page }) => {
         const container = page.locator('section.why').locator('.why__container');
         await expect(container.getByRole('heading', { name: /office environment/i })).toBeVisible();
         await expect(container.getByRole('heading', { name: /dual certification/i })).toBeVisible();
@@ -74,32 +74,56 @@ test.describe('IRP Platform - Desktop Tests', () => {
 
     // IRP_DT_TC_008 - Fullstack 12 technologies
     test('IRP_DT_TC_008 - Verify Fullstack Development lists all 12 technologies', async ({ page }) => {
-        const fullstackSection = page.locator('.spec__card').filter({
-            hasText: /fullstack development with ai/i
-        });
-        const expectedTech = [
-            'ReactJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'HTML/CSS',
-            'Javascript/Typescript', 'Playwright', 'Postman', 'Google Cloud', 'Github',
-            'Nodemon', 'Storybook'
-        ];
-        for (const tech of expectedTech) {
-            await expect(fullstackSection.getByText(new RegExp(tech, 'i'))).toBeVisible();
-        }
+        const fullstackSection = page.getByRole('heading', { name: /fullstack development with ai/i })
+        .locator('..');
+
+        const items = fullstackSection.locator('li');
+
+        // ✅ 1. Validate count
+        await expect(items).toHaveCount(12);
+
+        // ✅ 2. Validate content (robust)
+        await expect(items).toContainText([
+            'ReactJS',
+            'NodeJS',
+            'ExpressJS',
+            'MongoDB',
+            'HTML/CSS',
+            'Javascript/Typescript',
+            'Playwright',
+            'Postman',
+            'Google Cloud',
+            'Github',
+            'Nodemon',
+            'Storybook'
+        ]);
     });
 
     // IRP_DT_TC_009 - Automation Testing 11 technologies
     test('IRP_DT_TC_009 - Verify Automation Testing lists all 11 technologies', async ({ page }) => {
-        const automationSection = page.locator('.spec__card').filter({
-            hasText: /automation testing/i
-        });
-        const expectedItems = [
-            'E2E Testing', 'API Testing', 'Mobile Testing', 'Cypress',
-            'Playwright', 'Browserstack', 'Postman', 'Appium', 'HTML/CSS/Javascript ',
-            'WebdriverIO', 'Zoho Issue Tracker'
-        ];
-        for (const item of expectedItems) {
-            await expect(automationSection.getByText(new RegExp(item, 'i'))).toBeVisible();
-        }
+        const automationSection = page
+        .getByRole('heading', { name: /automation testing with ai/i })
+        .locator('..'); // go to parent container
+        
+        const items = automationSection.locator('li');
+
+        // ✅ 1. Validate count
+        await expect(items).toHaveCount(11);
+
+        // ✅ 2. Validate content (robust)
+        await expect(items).toContainText([
+            'E2E Testing',
+            'API Testing',
+            'Mobile Testing',
+            'Cypress',
+            'HTML/CSS/Javascript',
+            'Playwright',
+            'Browserstack',
+            'Postman',
+            'Appium',
+            'WebdriverIO',
+            'Zoho Issue Tracker'
+        ]);
     });
 
     // IRP_DT_TC_010 - Bootcamp pricing
