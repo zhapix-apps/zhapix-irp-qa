@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2979ff" />
-    <meta name="description" content="Ready to launch your journey into the IT world of your dreams? Join Zhapix Industry Readiness Program." />
+    <meta name="description"
+        content="Ready to launch your journey into the IT world of your dreams? Join Zhapix Industry Readiness Program." />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Zhapix IRP" />
@@ -17,12 +18,8 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
-    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/icon-16x16.png" />
-    
+
     <title>Industry Readiness Program – Zhapix</title>
-    <link rel="icon" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" crossorigin href="./assets/index-BmtXubBV.css">
 </head>
@@ -41,11 +38,11 @@
         </div>
     </nav>
 
-    <section class="hero"  data-testid="hero-section">
+    <section class="hero" data-testid="hero-section">
 
         <!-- Layered background -->
         <div class="hero__bg"></div>
-        
+
 
         <!-- Hero Content -->
         <div class="hero__content">
@@ -74,7 +71,7 @@
 
         // Zoho login function
         function loginWithZoho() {
-            window.location.href = 'https://zhapix-dev.el.r.appspot.com/auth/zoho/login';
+            window.location.href = 'https://app-qa-dot-zhapix-dev.el.r.appspot.com/auth/zoho/login';
         }
 
         // Login button click event listener
@@ -191,64 +188,66 @@
     </section>
 
 
-     <section class="specialization" data-testid="specialization">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Choose Your Specialization</h2>
-        <p class="section-subtitle">Select the path that matches your career aspirations.</p>
-      </div>
- 
-      <div class="cards-container">
-        <!-- Fullstack Development Card -->
-        <div class="card">
-          <h3 class="card-title">Fullstack Development with AI</h3>
-          <p class="card-description">
-            Build dynamic, end-to-end web applications using the powerful MERN Stack trusted by modern Tech companies.
-          </p>
-          <div class="technologies">
-            <p class="tech-label">Key Technologies :</p>
-            <ul class="tech-list">
-              <li>ReactJS</li>
-  <li>NodeJS</li>
-  <li>ExpressJS</li>
-  <li>MongoDB</li>
-  <li>HTML/CSS</li>
-  <li>Javascript/Typescript</li>
-  <li>Playwright</li>
-  <li>Postman</li>
-  <li>Google Cloud CCP</li>
-  <li>Github</li>
-  <li>Nodemon</li>
-  <li>Storybook</li>
-          </div>
+    <section class="specialization" data-testid="specialization">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Specialization</h2>
+                <p class="section-subtitle">Select the path that matches your career aspirations.</p>
+            </div>
+
+            <div class="cards-container">
+                <!-- Fullstack Development Card -->
+                <div class="card">
+                    <h3 class="card-title">Fullstack Development with AI</h3>
+                    <p class="card-description">
+                        Build dynamic, end-to-end web applications using the powerful MERN Stack trusted by modern Tech
+                        companies.
+                    </p>
+                    <div class="technologies">
+                        <p class="tech-label">Key Technologies :</p>
+                        <ul class="tech-list">
+                            <li>ReactJS</li>
+                            <li>NodeJS</li>
+                            <li>ExpressJS</li>
+                            <li>MongoDB</li>
+                            <li>HTML/CSS</li>
+                            <li>Javascript/Typescript</li>
+                            <li>Playwright</li>
+                            <li>Postman</li>
+                            <li>Google Cloud CCP</li>
+                            <li>Github</li>
+                            <li>Nodemon</li>
+                            <li>Storybook</li>
+                    </div>
+                </div>
+
+                <!-- Automation Testing Card -->
+                <div class="card">
+                    <h3 class="card-title">Automation Testing with AI</h3>
+                    <p class="card-description">
+                        Gain hands-on experience in automating UI workflows, validating APIs, and ensuring application
+                        reliability across platforms.
+                    </p>
+                    <div class="technologies">
+                        <p class="tech-label">Key Technologies :</p>
+                        <ul class="tech-list">
+                            <li>E2E Testing</li>
+                            <li>API Testing</li>
+                            <li>Mobile Testing</li>
+                            <li>Cypress</li>
+                            <li>HTML/CSS/Javascript</li>
+                            <li>Playwright</li>
+                            <li>Browserstack</li>
+                            <li>Postman</li>
+                            <li>Appium</li>
+                            <li>WebdriverIO</li>
+                            <li>Zoho Issue Tracker</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
- 
-        <!-- Automation Testing Card -->
-        <div class="card">
-          <h3 class="card-title">Automation Testing with AI</h3>
-          <p class="card-description">
-            Gain hands-on experience in automating UI workflows, validating APIs, and ensuring application reliability across platforms.
-          </p>
-          <div class="technologies">
-            <p class="tech-label">Key Technologies :</p>
-            <ul class="tech-list">
-              <li>E2E Testing</li>
-  <li>API Testing</li>
-  <li>Mobile Testing</li>
-  <li>Cypress</li>
-  <li>HTML/CSS/Javascript</li>
-  <li>Playwright</li>
-  <li>Browserstack</li>
-  <li>Postman</li>
-  <li>Appium</li>
-  <li>WebdriverIO</li>
-  <li>Zoho Issue Tracker</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- ── IRP PROGRAM STRUCTURE SECTION ── -->
     <section class="irp" data-testid="irp-structure">
@@ -328,7 +327,7 @@
 
 
     <!-- ── FAQ SECTION ── -->
-    <section class="faq"  data-testid="faq">
+    <section class="faq" data-testid="faq">
         <div class="faq__bg"></div>
         <div class="faq__overlay"></div>
         <div class="faq__container">
@@ -388,7 +387,7 @@
 
 
     <!-- ── FOOTER SECTION ── -->
-    <footer class="footer"  data-testid="footer" style="border-top:none;margin-top:0;">
+    <footer class="footer" data-testid="footer" style="border-top:none;margin-top:0;">
         <div class="footer__bg"></div>
         <div class="footer__overlay"></div>
         <div class="footer__container">
@@ -432,39 +431,39 @@
         </div>
     </footer>
 
-   
-        <div class="footer__copy"  data-testid="footer-copy">
-            <p>Copyright © 2026 Zhapix ™ | All Rights Reserved</p>
-        </div>
 
-        <div class="zpcontainer-fluid zpcontainer">
-            <div data-element-id="elm_RaW3UFoQdzSlziyOm8KQDQ" data-element-type="row"
-                class="zprow zprow-container zpalign-items-flex-start zpjustify-content-flex-start zpdefault-section zpdefault-section-bg "
-                data-equal-column="false">
-                <style type="text/css"></style>
-                <div data-element-id="elm_yZby31kijuLhIIBPq1WK4A" data-element-type="column"
-                    class="zpelem-col zpcol-12 zpcol-md-12 zpcol-sm-12 zpalign-self- zpdefault-section zpdefault-section-bg ">
-                    <style type="text/css">
-                        [data-element-id="elm_yZby31kijuLhIIBPq1WK4A"].zpelem-col {
-                            margin-block-start: -130px;
-                        }
-                    </style>
-                    <div data-element-id="elm_-yIZPcAl-gKIKeJEhWPPOg" data-element-type="codeSnippet"
-                        class="zpelement zpelem-codesnippet zp-hidden-md zp-hidden-sm zp-hidden-xs ">
-                        <div class="zpsnippet-container">
-                            <script>window.$zoho = window.$zoho || {};
-                                $zoho.salesiq = $zoho.salesiq || {
-                                    ready: function () { }
-                                };
-                            </script>
-                            <script id="zsiqscript"
-                                src="https://salesiq.zohopublic.in/widget?wc=siqfc632213f5e4f5ca4d10f92a32b23245b831f6800d82dc65744e534cc62cc81bfeb9c15447813f2f452e9c14a0f85e56"
-                                defer=""></script>
-                        </div>
+    <div class="footer__copy" data-testid="footer-copy">
+        <p>Copyright © 2026 Zhapix ™ | All Rights Reserved</p>
+    </div>
+
+    <div class="zpcontainer-fluid zpcontainer">
+        <div data-element-id="elm_RaW3UFoQdzSlziyOm8KQDQ" data-element-type="row"
+            class="zprow zprow-container zpalign-items-flex-start zpjustify-content-flex-start zpdefault-section zpdefault-section-bg "
+            data-equal-column="false">
+            <style type="text/css"></style>
+            <div data-element-id="elm_yZby31kijuLhIIBPq1WK4A" data-element-type="column"
+                class="zpelem-col zpcol-12 zpcol-md-12 zpcol-sm-12 zpalign-self- zpdefault-section zpdefault-section-bg ">
+                <style type="text/css">
+                    [data-element-id="elm_yZby31kijuLhIIBPq1WK4A"].zpelem-col {
+                        margin-block-start: -130px;
+                    }
+                </style>
+                <div data-element-id="elm_-yIZPcAl-gKIKeJEhWPPOg" data-element-type="codeSnippet"
+                    class="zpelement zpelem-codesnippet zp-hidden-md zp-hidden-sm zp-hidden-xs ">
+                    <div class="zpsnippet-container">
+                        <script>window.$zoho = window.$zoho || {};
+                            $zoho.salesiq = $zoho.salesiq || {
+                                ready: function () { }
+                            };
+                        </script>
+                        <script id="zsiqscript"
+                            src="https://salesiq.zohopublic.in/widget?wc=siqfc632213f5e4f5ca4d10f92a32b23245b831f6800d82dc65744e534cc62cc81bfeb9c15447813f2f452e9c14a0f85e56"
+                            defer=""></script>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 </body>
 
