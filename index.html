@@ -57,6 +57,7 @@
     <script>
         // Subtle parallax on mouse move
         const grid = document.querySelector('.hero__grid');
+        window.api.url='';
 
         document.querySelector('.hero').addEventListener('mousemove', e => {
             const { innerWidth: w, innerHeight: h } = window;
@@ -71,7 +72,7 @@
 
         // Zoho login function
         function loginWithZoho() {
-            window.location.href = 'https://app-qa-dot-zhapix-dev.el.r.appspot.com/auth/zoho/login';
+            window.location.href = '';
         }
 
         // Login button click event listener
