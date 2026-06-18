@@ -23,8 +23,8 @@
     <link rel="manifest" href="manifest.json" />
 
     <title>Industry Readiness Program – Zhapix</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" crossorigin href="./assets/index-BEncbHWH.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" crossorigin href="./assets/index-DdFEYwx-.css">
 </head>
 
 <body>
@@ -43,24 +43,19 @@
 
     <section class="hero" data-testid="hero-section">
 
-        <!-- Layered background -->
-        <div class="hero__bg"></div>
-
-
-        <!-- Hero Content -->
-        <div class="hero__content">
-            <h1 class="hero__title">Industry Readiness Program</h1>
-            <p class="hero__desc">Ready to launch your journey into the IT world of your dreams?</p>
-            <a href="https://forms.zhapix.com/zhapix/form/IndustryReadinessProgram/formperma/Z4_EwT_Z39xYLJvcsZredeZYDDczXJsLLbadf8ahW8Q" id="apply-now-link" class="btn-apply" role="button" target="_blank"
-                rel="noopener noreferrer">Apply Now</a>
-        </div>
-
-    </section>
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Industry Readiness Program</h1>
+      <p>Ready to launch your journey into the IT world of your dreams?</p>
+      <a href="#" class="hero-btn">Apply Now</a>
+    </div>
+  </section>
 
     <script>
         // Subtle parallax on mouse move
         const grid = document.querySelector('.hero__grid');
-        window.appVersion = '1.0.2';
+        window.appVersion = '1.0.1';
     
 
         document.querySelector('.hero').addEventListener('mousemove', e => {
@@ -119,7 +114,7 @@
     <section class="mentor" data-testid="about-mentor">
         <div class="mentor__container">
             <div class="mentor__image">
-                <img src="./assets/mentor-photo.png" alt="Vijayan Thanigaivelu" />
+                <img src="./assets/mentor.png" alt="Vijayan Thanigaivelu" />
             </div>
             <div class="mentor__content">
                 <h2 class="mentor__title">About Mentor</h2>
@@ -226,32 +221,6 @@
                     </div>
                 </div>
 
-                <!-- Automation Testing Card -->
-                <div class="card">
-                    <h3 class="card-title">Automation Testing with AI</h3>
-                    <p class="card-description">
-                        Gain hands-on experience in automating UI workflows, validating APIs, and ensuring application
-                        reliability across platforms.
-                    </p>
-                    <div class="technologies">
-                        <p class="tech-label">Key Technologies :</p>
-                        <ul class="tech-list">
-                            <li>E2E Testing</li>
-                            <li>API Testing</li>
-                            <li>Mobile Testing</li>
-                            <li>Cypress</li>
-                            <li>HTML/CSS/Javascript</li>
-                            <li>Playwright</li>
-                            <li>Browserstack</li>
-                            <li>Postman</li>
-                            <li>Appium</li>
-                            <li>WebdriverIO</li>
-                            <li>Zoho Issue Tracker</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- ── IRP PROGRAM STRUCTURE SECTION ── -->
@@ -271,26 +240,212 @@
                 <!-- Bootcamp -->
                 <h3 class="irp__sub">Bootcamp Training</h3>
                 <p class="irp__price">Rs. 15,000 <span class="irp__gst">(+ GST)</span></p>
-                <ul class="irp__list">
-                    <li class="irp__item--teal">2 months intensive Bootcamp Training</li>
-                    <li class="irp__item--white">Live webinars, Workshops and direct interactions with mentor</li>
-                    <li class="irp__item--teal">Access to office for clarifications and technical support</li>
-                    <li class="irp__item--white">Flexible payment plans with instalment options</li>
-                </ul>
-
-                <!-- Internship -->
-                <h3 class="irp__sub">Internship</h3>
-                <ul class="irp__list">
-                    <li class="irp__item--teal">2 months Internship with Realtime Projects</li>
-                    <li class="irp__item--white">Weekly In-Person access to our Office</li>
-                    <li class="irp__item--teal">Agile &amp; Daily scrum meetings</li>
-                    <li class="irp__item--white">Team collaboration &amp; networking</li>
-                </ul>
+                <p class="irp__price-desc">Priced at ₹ 15,000 – not for low value, but to make industry - ready training accessible to serious learners.</p>
             </div>
-
         </div>
     </section>
 
+    <!-- ── BOOTCAMP FEATURES SECTION ── -->
+    <section class="bootcamp-features" data-testid="bootcamp-features">
+        <div class="bootcamp-container">
+            <h2 class="bootcamp-title">Bootcamp</h2>
+            <p class="bootcamp-subtitle">2 months duration</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="10" width="14" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M22 10L26 8V24L22 22" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Weekly (Live)<br/>Webinar</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="12" y="12" width="2" height="8" fill="currentColor"/>
+                            <rect x="18" y="12" width="2" height="8" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Weekly (Live)<br/>Workshop</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 12H24V26H8V12Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 12V8C11 6.89543 11.8954 6 13 6H19C20.1046 6 21 6.89543 21 8V12" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="14" y="12" width="4" height="4" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">In-person<br/>Support</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <text x="16" y="22" font-size="24" font-weight="bold" fill="currentColor" text-anchor="middle">₹</text>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Flexible<br/>Payments</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 15C8 13 10 12 12 12C14 12 16 13 16 15V24H8V15Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M18 24V20C18 18.8954 18.8954 18 20 18H24C25.1046 18 26 18.8954 26 20V24" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Mentor<br/>Support</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="16" height="16" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+                            <circle cx="16" cy="12" r="1.5" fill="currentColor"/>
+                            <circle cx="20" cy="12" r="1.5" fill="currentColor"/>
+                            <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+                            <circle cx="16" cy="16" r="1.5" fill="currentColor"/>
+                            <circle cx="20" cy="16" r="1.5" fill="currentColor"/>
+                            <path d="M8 20H24" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">AI-Powered<br/>SDLC</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="12" height="16" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 12H17" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 16H17" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 20H15" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M22 10C21.4477 10 21 10.4477 21 11V23C21 23.5523 21.4477 24 22 24C22.5523 24 23 23.5523 23 23V11C23 10.4477 22.5523 10 22 10Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Certification<br/>Issued</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 14C8 12 9 11 10 11H22C23 11 24 12 24 14V24H8V14Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M12 11V8C12 7.44772 12.4477 7 13 7H19C19.5523 7 20 7.44772 20 8V11" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="10" y="15" width="2" height="6" fill="currentColor"/>
+                            <rect x="15" y="13" width="2" height="8" fill="currentColor"/>
+                            <rect x="20" y="17" width="2" height="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">KPI-Based<br/>Sessions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── INTERNSHIP FEATURES SECTION ── -->
+       
+    <section class="internship-features" data-testid="internship-features">
+              <div class="internship-bg"></div>
+        <div class="internship-overlay"></div>
+            <div class="internship-container">
+            <h2 class="internship-title">Internship</h2>
+            <p class="internship-subtitle">2 months duration</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="8" height="8" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="14" y="14" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Real-Time<br/>Project</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 10C12 8 14 7 16 7C18 7 20 8 20 10M12 10C12 12 14 13 16 13C18 13 20 12 20 10M12 10V22M20 10V22M14 22C14 24 15 25 16 25C17 25 18 24 18 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Professional<br/>Tools</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 12H24V26H8V12Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 12V8C11 6.89543 11.8954 6 13 6H19C20.1046 6 21 6.89543 21 8V12" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="14" y="12" width="4" height="4" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Weekly Office<br/>Access</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="10" width="20" height="14" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M10 26H22" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M15 26V28H17V26" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Agile - Scrum<br/>Meeting</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 15C8 13 10 12 12 12C14 12 16 13 16 15V24H8V15Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M20 24V18C20 16.8954 20.8954 16 22 16H24C25.1046 16 26 16.8954 26 18V24" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Mentor<br/>Guidance</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 14L12 10L14 12L24 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 8V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M10 10L8 14C8 18 10 22 16 26C22 22 24 18 24 14V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Open Source<br/>Exposure</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="12" height="16" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 12H17" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 16H17" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 20H15" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M22 10C21.4477 10 21 10.4477 21 11V23C21 23.5523 21.4477 24 22 24C22.5523 24 23 23.5523 23 23V11C23 10.4477 22.5523 10 22 10Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">Internship<br/>Certificate</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 6L19 14H27L21 19L23 27L16 22L9 27L11 19L5 14H13L16 6Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <p class="feature-text">KPI Based<br/>recognition</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ── YOUR TRANSFORMATION JOURNEY SECTION ── -->
     <section class="journey" data-testid="journey">
@@ -330,7 +485,69 @@
         </div>
     </section>
 
+    
+     <!-- ── WHO SHOULD JOIN SECTION ── -->
+<section class="who-should-join" data-testid="who-should-join">
+    <div class="who-should-join__bg"></div>
+    <div class="who-should-join__overlay"></div>
+    <div class="who-should-join__container">
+            <h2 class="who-should-join__title">Who Should Join</h2>
+            <p class="who-should-join__subtitle">This program is designed for aspiring tech professionals at every stage of their journey</p>
 
+            <div class="who-should-join__grid">
+                <div class="who-should-join__card">
+                    <div class="who-should-join__icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4C13.5 4 5 12.5 5 23C5 29.5 8.5 35 13.5 37.5V44H34.5V37.5C39.5 35 43 29.5 43 23C43 12.5 34.5 4 24 4Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="24" cy="14" r="3" fill="currentColor"/>
+                            <path d="M20 20H28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="who-should-join__card-title">Students & Freshers</h3>
+                    <p class="who-should-join__card-desc">Launch your tech career with practical skills and industry-recognized certification to stand out in the job market.</p>
+                </div>
+
+                <div class="who-should-join__card">
+                    <div class="who-should-join__icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 8C15 8 8 15 8 24C8 33 15 40 24 40C33 40 40 33 40 24C40 15 33 8 24 8Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M24 14V24L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="who-should-join__card-title">Career Switchers</h3>
+                    <p class="who-should-join__card-desc">Successfully transition from non-IT backgrounds into technology roles with structured, beginner-friendly training.</p>
+                </div>
+
+                <div class="who-should-join__card">
+                    <div class="who-should-join__icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="10" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M8 16H40" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="13" r="1.5" fill="currentColor"/>
+                            <circle cx="18" cy="13" r="1.5" fill="currentColor"/>
+                            <circle cx="24" cy="13" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="who-should-join__card-title">IT Professionals</h3>
+                    <p class="who-should-join__card-desc">Upskill with modern programming practices and expand your technical expertise to advance your career.</p>
+                </div>
+
+                <div class="who-should-join__card">
+                    <div class="who-should-join__icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 6L28.5 16H39L31 22L35 33L24 27L13 33L17 22L9 16H19.5L24 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="24" cy="24" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="who-should-join__card-title">Tech Enthusiasts</h3>
+                    <p class="who-should-join__card-desc">Turn your interest in tech into practical, job-ready programming skills and industry-standard expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
     <!-- ── FAQ SECTION ── -->
     <section class="faq" data-testid="faq">
         <div class="faq__bg"></div>
@@ -389,6 +606,205 @@
             </div>
         </div>
     </section>
+
+     <!-- ── TESTIMONIALS SECTION ── -->
+<section class="testimonials" data-testid="testimonials">
+
+  <!-- Layer 1: Background image -->
+  <div class="testimonials__bg"></div>
+
+  <!-- Layer 2: Gradient color overlay -->
+  <div class="testimonials__overlay"></div>
+
+  <!-- Layer 3: All content goes here -->
+  <div class="testimonials__container">
+    <h2 class="testimonials__title">Testimonials</h2>
+    <p class="testimonials__subtitle">Hear from our past interns about their transformative experience with the IRP Program.</p>
+
+    <div class="testimonial-grid">
+
+      <!-- Card 1: Poorany -->
+      <div class="testimonial-card">
+        <div class="avatar-wrapper">
+          <img src="./assets/Poorany.jpeg" alt="Poorany">
+        </div>
+        <h3 class="user-name">Poorany Priyadharshiny T</h3>
+        <div class="testimonial-content">
+          <p class="testimonial-text">My journey at Zhapix Technologies has been a valuable learning experience that gave me exposure to UI/UX design, frontend development, prototyping, and real-time project workflows...</p>
+          <label for="toggle-poorany" class="read-more-btn">Read More</label>
+        </div>
+      </div>
+
+      <!-- Card 2: Aarthi -->
+      <div class="testimonial-card">
+        <div class="avatar-wrapper">
+          <img src="./assets/Aarthi.jpeg" alt="Aarthi Gopal">
+        </div>
+        <h3 class="user-name">Aarthi Gopal</h3>
+        <div class="testimonial-content">
+          <p class="testimonial-text">As a fresher, joining the company was a completely new experience for me. During my internship, I improved my skills in HTML, CSS, JavaScript, React, Figma, Canva, and Zoho tools...</p>
+          <label for="toggle-aarthi" class="read-more-btn">Read More</label>
+        </div>
+      </div>
+
+      <!-- Card 3: Sunitha -->
+      <div class="testimonial-card">
+        <div class="avatar-wrapper">
+          <img src="./assets/sunitha.jpeg" alt="Sunitha Chanda">
+        </div>
+        <h3 class="user-name">Sunitha Chanda</h3>
+        <div class="testimonial-content">
+          <p class="testimonial-text">Starting my journey as a UI/UX Intern at Zhapix Technologies gave me valuable exposure to real-time design workflows and digital product development...</p>
+          <label for="toggle-sunitha" class="read-more-btn">Read More</label>
+        </div>
+      </div>
+
+      <!-- Card 4: Abdulkalam -->
+      <div class="testimonial-card">
+        <div class="avatar-wrapper">
+          <img src="./assets/abdul.jpeg" alt="Abdulkalam K">
+        </div>
+        <h3 class="user-name">Abdulkalam K</h3>
+        <div class="testimonial-content">
+          <p class="testimonial-text">I recently completed my Developer Internship at Zhapix Technologies, where I worked on real-time projects and developed application components based on UI designs shared by the design team...</p>
+          <label for="toggle-kalam" class="read-more-btn">Read More</label>
+        </div>
+      </div>
+
+      <!-- Card 5: Viswanathan -->
+      <div class="testimonial-card">
+        <div class="avatar-wrapper">
+          <img src="./assets/viswa.jpeg" alt="Viswanathan S">
+        </div>
+        <h3 class="user-name">Viswanathan S</h3>
+        <div class="testimonial-content">
+          <p class="testimonial-text">My journey at Zhapix has been a valuable learning experience that gave me exposure to UI development, full-stack practices, and automation testing fundamentals using industry-standard tools...</p>
+          <label for="toggle-viswa" class="read-more-btn">Read More</label>
+        </div>
+      </div>
+
+      <!-- Card 6: Monish -->
+      <div class="testimonial-card">
+        <div class="avatar-wrapper">
+          <img src="./assets/monish.JPG" alt="Monish R">
+        </div>
+        <h3 class="user-name">Monish R</h3>
+        <div class="testimonial-content">
+          <p class="testimonial-text">I recently completed my Developer Internship at Zhapix Technologies, where I worked on real-time projects and developed application components based on UI designs shared by the design team...</p>
+          <label for="toggle-monish" class="read-more-btn">Read More</label>
+        </div>
+      </div>
+
+    </div><!-- /testimonial-grid -->
+
+
+    <!-- ── MODALS ── -->
+
+    <!-- Modal: Poorany -->
+    <input type="checkbox" id="toggle-poorany" class="modal-toggle">
+    <div class="modal-overlay">
+      <label for="toggle-poorany" class="modal-close-backdrop"></label>
+      <div class="modal-content">
+        <label for="toggle-poorany" class="close-x">&times;</label>
+        <div class="modal-header">
+          <img src="./assets/poorany.jpeg" alt="Poorany">
+          <h3>Poorany Priyadharshiny T</h3>
+        </div>
+        <div class="modal-body">
+          <p>My journey at Zhapix Technologies has been a valuable learning experience that gave me exposure to UI/UX design, frontend development, prototyping, and real-time project workflows. Working in a creative and collaborative environment helped me improve my design thinking, problem-solving, communication, and professional skills.</p>
+          <p>Through live projects, I gained practical experience in creating user-friendly and responsive designs while understanding real workplace workflows. I am sincerely grateful to my colleagues, the entire zhapix team, and especially Vijayan sir for their continuous support and guidance throughout this journey.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Aarthi -->
+    <input type="checkbox" id="toggle-aarthi" class="modal-toggle">
+    <div class="modal-overlay">
+      <label for="toggle-aarthi" class="modal-close-backdrop"></label>
+      <div class="modal-content">
+        <label for="toggle-aarthi" class="close-x">&times;</label>
+        <div class="modal-header">
+            <img src="./assets/Aarthi.jpeg" alt="Aarthi Gopal">
+          <h3>Aarthi Gopal</h3>
+        </div>
+        <div class="modal-body">
+          <p>As a fresher, joining the company was a completely new experience for me. During my internship, I improved my skills in HTML, CSS, JavaScript, React, Figma, Canva, and Zoho tools while learning frontend development and professional workflows.</p>
+          <p>Coming from a B.Com background and later transitioning into MCA, I started learning from scratch and improved through real-time projects and continuous practice. Over these 6 months, I gained valuable industry exposure and practical knowledge. I am thankful to the company for this opportunity and for offering me a permanent employee position after my internship.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Sunitha -->
+    <input type="checkbox" id="toggle-sunitha" class="modal-toggle">
+    <div class="modal-overlay">
+      <label for="toggle-sunitha" class="modal-close-backdrop"></label>
+      <div class="modal-content">
+        <label for="toggle-sunitha" class="close-x">&times;</label>
+        <div class="modal-header">
+          <img src="./assets/sunitha.jpeg" alt="Sunitha">
+          <h3>Sunitha Chanda</h3>
+        </div>
+        <div class="modal-body">
+          <p>Starting my journey as a UI/UX Intern at Zhapix Technologies gave me valuable exposure to real-time design workflows and digital product development. During my internship, I worked on wireframes, UI designs, responsive layouts, and prototypes using tools like Figma, Canva, and Zoho Sites.</p>
+          <p>This experience helped me improve my creativity, problem-solving, and professional skills while understanding real workplace workflows. Moving from an intern role to becoming a UI/UX Engineer has been a meaningful milestone in my career, and I am grateful for the support and learning opportunities throughout this journey.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Abdulkalam -->
+    <input type="checkbox" id="toggle-kalam" class="modal-toggle">
+    <div class="modal-overlay">
+      <label for="toggle-kalam" class="modal-close-backdrop"></label>
+      <div class="modal-content">
+        <label for="toggle-kalam" class="close-x">&times;</label>
+        <div class="modal-header">
+          <img src="./assets/abdul.jpeg" alt="Abdulkalam">
+          <h3>Abdulkalam K</h3>
+        </div>
+        <div class="modal-body">
+          <p>I recently completed my Developer Internship at Zhapix Technologies, where I worked on real-time projects and developed application components based on UI designs shared by the design team.</p>
+          <p>During the internship, I gained practical exposure to coding, project workflows, and the overall IT work environment. I also participated in KT meetings, collaborated with the team, and followed professional work practices such as daily task updates. This experience helped me build a strong foundation in real-time development and grow both technically and professionally.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Viswanathan -->
+    <input type="checkbox" id="toggle-viswa" class="modal-toggle">
+    <div class="modal-overlay">
+      <label for="toggle-viswa" class="modal-close-backdrop"></label>
+      <div class="modal-content">
+        <label for="toggle-viswa" class="close-x">&times;</label>
+        <div class="modal-header">
+          <img src="./assets/viswa.jpeg" alt="Viswanathan">
+          <h3>Viswanathan S</h3>
+        </div>
+        <div class="modal-body">
+          <p>My journey at Zhapix has been a valuable learning experience that gave me exposure to UI development, full-stack practices, and automation testing fundamentals using industry-standard tools.</p>
+          <p>Working in a collaborative environment helped me improve my problem-solving, communication, and professional skills. Through real-time projects, I gained practical knowledge of how solutions are developed, tested, and delivered in a professional workplace. I am truly grateful to my colleagues, the entire Zhapix team, and especially Vijayan sir for their continuous support and guidance throughout this journey.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Monish -->
+    <input type="checkbox" id="toggle-monish" class="modal-toggle">
+    <div class="modal-overlay">
+      <label for="toggle-monish" class="modal-close-backdrop"></label>
+      <div class="modal-content">
+        <label for="toggle-monish" class="close-x">&times;</label>
+        <div class="modal-header">
+          <img src="./assets/monish.JPG" alt="Monish">
+          <h3>Monish R</h3>
+        </div>
+        <div class="modal-body">
+          <p>I recently completed my Developer Internship at Zhapix Technologies, where I worked on real-time projects and developed application components based on UI designs shared by the design team.</p>
+          <p>During the internship, I gained practical exposure to coding, project workflows, and the IT work environment. I also participated in KT meetings, collaborated with the team, and followed professional work practices in daily tasks. This experience helped me build a strong foundation in real-time development and grow both technically and professionally.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /testimonials__container -->
+</section>
+
 
 
     <!-- ── FOOTER SECTION ── -->
